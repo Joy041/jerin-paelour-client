@@ -4,6 +4,7 @@ import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
 import SocialLogin from '../Sheared/SocialLogin/SocialLogin';
 import Navbar from '../Sheared/Navbar/Navbar';
+import useAxiosSecure from '../../hooks/useAxiosSecure';
 
 
 const Register = () => {
@@ -11,6 +12,7 @@ const Register = () => {
     const [success, setSuccess] = useState('')
     const { register, updateUserProfile, verification } = useContext(AuthContext)
     const navigate = useNavigate()
+    const [axiosSecure] = useAxiosSecure()
 
     const handleRegisterForm = event => {
         event.preventDefault()
@@ -56,15 +58,23 @@ const Register = () => {
                 userVerification(loggedUser)
                 updateUserProfile(loggedUser, name)
                     .then(() => {
-                        form.reset()
-                        navigate('/')
 
-                        Swal.fire({
-                            title: 'Success!',
-                            text: 'Register successful',
-                            icon: 'success',
-                            confirmButtonText: 'Cool'
-                        })
+                        axiosSecure.post('/users', { name: name, email: email })
+                            .then(res => {
+                                if (res.data.insertedId) {
+                                    form.reset()
+                                    navigate('/')
+
+                                    Swal.fire({
+                                        title: 'Success!',
+                                        text: 'Register successful',
+                                        icon: 'success',
+                                        confirmButtonText: 'Cool'
+                                    })
+                                }
+                            })
+
+
                     })
                     .catch(error => setError(error))
             })

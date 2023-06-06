@@ -3,18 +3,23 @@ import { FaGithub, FaGoogle } from "react-icons/fa";
 import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
 
-const SocialLogin = ({setError}) => {
+const SocialLogin = ({ setError }) => {
     const { googleLogin, githubLogin } = useContext(AuthContext)
     const navigate = useNavigate()
     const location = useLocation();
+    const [axiosSecure] = useAxiosSecure()
 
     const from = location.state?.from?.pathname || '/'
 
     const handleGoogleRegister = () => {
         googleLogin()
-            .then(() => {
+            .then(result => {
+                const loggedUser = result.user;
+                axiosSecure.post('/users', { name: loggedUser.displayName, email: loggedUser.email })
+                    .then(res => {
                         navigate(from, { replace: true })
 
                         Swal.fire({
@@ -23,6 +28,8 @@ const SocialLogin = ({setError}) => {
                             icon: 'success',
                             confirmButtonText: 'Cool'
                         })
+                    })
+
 
             })
             .catch(error => setError(error.message))
@@ -30,7 +37,10 @@ const SocialLogin = ({setError}) => {
 
     const handleGithubRegister = () => {
         githubLogin()
-            .then(() => {            
+            .then(result => {
+                const loggedUser = result.user;
+                axiosSecure.post('/users', { name: loggedUser.displayName, email: loggedUser.email })
+                    .then(res => {
                         navigate(from, { replace: true })
 
                         Swal.fire({
@@ -39,6 +49,7 @@ const SocialLogin = ({setError}) => {
                             icon: 'success',
                             confirmButtonText: 'Cool'
                         })
+                    })
             })
             .catch(error => setError(error.message))
     }
