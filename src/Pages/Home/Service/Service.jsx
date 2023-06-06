@@ -15,7 +15,7 @@ const Service = () => {
     })
 
     return (
-            <div className='flex flex-col  web-font'>
+            <div className='flex flex-col  web-font max-w-screen-2xl mx-auto'>
                 <h1 className='text-3xl font-bold mt-24 mb-20 text-center'>Our Awesome <span className='text-[#F73E7B]'>Services</span></h1>
                 <div className='flex flex-col md:flex-row gap-14 items-center justify-between'>
                     {

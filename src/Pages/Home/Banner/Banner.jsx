@@ -3,7 +3,7 @@ import bannerImg from '../../../assets/images/beautiful-asian-woman.png'
 
 const Banner = () => {
     return (
-        <div className="hero h-[600px] mb-48 lg:mb-0">
+        <div className="hero h-[600px] mb-56 md:mb-36 lg:mb-0 max-w-screen-2xl mx-auto">
             <div className="hero-content flex-col lg:flex-row">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">BEAUTY SALON <br /> FOR EVERY WOMEN</h1>

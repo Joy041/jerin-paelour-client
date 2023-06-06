@@ -13,8 +13,8 @@ const Navbar = () => {
 
     const navItem = <div className='lg:flex items-center text-base font-semibold'>
         <li><Link to={'/'}>Home</Link></li>
-        <li><Link>Our Portfolio</Link></li>
-        <li><Link>Our Team</Link></li>
+        <li><Link>Our Service</Link></li>
+        <li><Link>Dashboard</Link></li>
         <li><Link>Contact Us</Link></li>
         <div className='md:ms-2'>
             {
@@ -24,7 +24,7 @@ const Navbar = () => {
     </div>
 
     return (
-        <div className="navbar bg-base-100 web-font">
+        <div className="navbar bg-base-100 web-font max-w-screen-2xl mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

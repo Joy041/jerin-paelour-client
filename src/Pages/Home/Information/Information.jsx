@@ -3,7 +3,7 @@ import img from '../../../assets/images/engin-akyurt.png'
 
 const Information = () => {
     return (
-        <div className=" h-[350px] mt-48">
+        <div className=" h-[350px] mt-48 max-w-screen-2xl lg:mx-auto">
             <div className=" flex flex-col justify-center items-center lg:flex-row-reverse mx-8">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Let us handle your <br /> screen <span className='text-[#F73E7B]'>Professionally</span>.</h1>

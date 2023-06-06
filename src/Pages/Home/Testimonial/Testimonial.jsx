@@ -20,41 +20,42 @@ const Testimonial = () => {
     })
 
     return (
-        <>
+        <div className='mt-48 mx-2 h-full max-w-screen-2xl lg:mx-auto'>
+            <h1 className='text-3xl font-bold text-center mb-20'>Testimonials</h1>
             <Swiper
-                slidesPerView={3}
+                slidesPerView={2}
                 spaceBetween={30}
                 pagination={{
                     clickable: true,
                 }}
                 modules={[Pagination]}
-                className="mySwiper"
+                className="mySwiper h-full"
             >
                 {
                     reviews.map(review => <SwiperSlide
                         key={review._id}
                     >
-                        <div className="text-center">
-                            <div>
-                                <div><img src={review.image} alt="" /></div>
+                        <div className="text-center mb-10 h-full">
+                            <div className='flex justify-center items-center'>
+                                <div><img src={review.image} width={56} className='rounded-full me-3' alt="" /></div>
                                 <div>
-                                    <p>{review.name}</p>
-                                    <p>{review.title}</p>
+                                    <p className='text-xl font-bold'>{review.name}</p>
+                                    <p className='text-sm font-medium'>{review.title}</p>
                                 </div>
                             </div>
-                            <p>{review.details}</p>
+                            <p className='mt-6'>{review.details}</p>
                             <Rating
                                 style={{ maxWidth: 180 }}
                                 value={review.rating}
                                 readOnly
-                                className="mx-auto mb-0 mt-12"
+                                className="mx-auto mt-12"
                             />
                         </div>
                     </SwiperSlide>)
                 }
 
             </Swiper>
-        </>
+        </div>
     );
 };
 

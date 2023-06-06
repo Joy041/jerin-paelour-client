@@ -4,6 +4,7 @@ import Navbar from '../../Sheared/Navbar/Navbar';
 import Service from '../Service/Service';
 import Information from '../Information/Information';
 import Testimonial from '../Testimonial/Testimonial';
+import Contact from '../Contact/Contact';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
            <Service></Service>
            <Information></Information>
            <Testimonial></Testimonial>
+           <Contact></Contact>
         </div>
     );
 };
