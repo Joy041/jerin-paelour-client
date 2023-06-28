@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import  { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/icons/logo.png'
 import { AuthContext } from '../../../Provider/AuthProvider';
@@ -14,7 +14,7 @@ const Navbar = () => {
     const navItem = <div className='lg:flex items-center text-base font-semibold'>
         <li><Link to={'/'}>Home</Link></li>
         <li><Link>Our Service</Link></li>
-        <li><Link>Dashboard</Link></li>
+        <li><Link to={'/dashboard'}>Dashboard</Link></li>
         <li><Link>Contact Us</Link></li>
         <div className='md:ms-2'>
             {

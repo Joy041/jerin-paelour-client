@@ -1,23 +1,61 @@
 [
     {
-        "_id": "642c155b2c4774f05c36eeaa",
-        "name": "Anti Age Face Treatment",
-        "details": "We craft stunning and amazing web UI, using a well drafted UX to fit your product.",
-        "image": "https://i.ibb.co/MMF04zT/Group-1373.png",
-        "price": 199
+        "_id": 1,
+        "live": "https://martial-verse.web.app/",
+        "client": "https://github.com/Joy041/martial-verse-client",
+        "server": "https://github.com/Joy041/martial-verse-client"
     },
     {
-        "_id": "642c155b2c4774f05c36eeaa",
-        "name": "Hair Color & Styling",
-        "details": "Amazing flyers, social media posts and brand representations that would make your brand stand out.",
-        "image": "https://i.ibb.co/L8m2ZB7/Group-1372.png",
-        "price": 99
+        "_id": 2,
+        "live": "https://kitty-krazy-364fd.web.app/",
+        "client": "https://github.com/Joy041/kitty-krazy-client",
+        "server": "https://github.com/Joy041/kitty-krazy-server"
     },
     {
-        "_id": "642c155b2c4774f05c36eeaa",
-        "name": "Skin Care Treatment",
-        "details": "With well written codes, we build amazing apps for all platforms, mobile and web apps in general.",
-        "image": "https://i.ibb.co/QHsn0qM/Group-1374.png",
-        "price": 14.7
+        "_id": 3,
+        "live": "https://kitchenise-web.web.app/",
+        "client": "https://github.com/Joy041/kitchenise-client",
+        "server": "https://github.com/Joy041/kitchenise-server"
+    },
+    {
+        "_id": 4,
+        "live": "https://car-doctor-web.web.app/",
+        "client": "https://github.com/Joy041/car-doctor-client",
+        "server": "https://github.com/Joy041/car-doctor-server-2"
+    },
+    {
+        "_id": 5,
+        "live": "https://the-news-dragon-dccd6.web.app/categories/0",
+        "client": "https://github.com/Joy041/the-dragon-news",
+        "server": "https://github.com/Joy041/the-dragon-news-server"
+    },
+    {
+        "_id": 6,
+        "live": "https://adorable-semifreddo-f3dba2.netlify.app/",
+        "client": "https://github.com/Joy041/get-job"
+    },
+    {
+        "_id": 7,
+        "live": "https://emajon-with-firebase-fe6d0.web.app/",
+        "client": "https://github.com/Joy041/ema-john-web",
+        "server": "https://github.com/Joy041/ema-jhon-server"
+    },
+    {
+        "_id": 8,
+        "live": "https://bistro-boss-f0ba1.web.app/",
+        "client": "https://github.com/Joy041/bistro-boss-client",
+        "server": "https://github.com/Joy041/bistro-boss-server"
+    },
+    {
+        "_id": 9,
+        "live": "https://frolicking-queijadas-0f0170.netlify.app/",
+        "client": "https://github.com/Joy041/quiz-hero"
+    },
+    {
+        "_id": 8,
+        "live": "https://bistro-boss-f0ba1.web.app/",
+        "client": "https://github.com/Joy041/bistro-boss-client",
+        "server": "https://github.com/Joy041/bistro-boss-server"
     }
+
 ]

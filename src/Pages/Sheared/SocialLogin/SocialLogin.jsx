@@ -19,7 +19,7 @@ const SocialLogin = ({ setError }) => {
             .then(result => {
                 const loggedUser = result.user;
                 axiosSecure.post('/users', { name: loggedUser.displayName, email: loggedUser.email })
-                    .then(res => {
+                    .then(() => {
                         navigate(from, { replace: true })
 
                         Swal.fire({
@@ -40,7 +40,7 @@ const SocialLogin = ({ setError }) => {
             .then(result => {
                 const loggedUser = result.user;
                 axiosSecure.post('/users', { name: loggedUser.displayName, email: loggedUser.email })
-                    .then(res => {
+                    .then(() => {
                         navigate(from, { replace: true })
 
                         Swal.fire({

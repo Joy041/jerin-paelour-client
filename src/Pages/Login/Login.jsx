@@ -8,7 +8,7 @@ import webImg from '../../assets/icons/logo.png'
 const Login = () => {
     const [error, setError] = useState('')
     const emailRef = useRef();
-    const { login, passwordReset, googleLogin, githubLogin } = useContext(AuthContext);
+    const { login, passwordReset } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -20,7 +20,7 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log(email, password, confirm)
+        console.log(email, password)
 
         setError('')
 

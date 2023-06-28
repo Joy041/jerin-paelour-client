@@ -5,3 +5,11 @@
 .web-font {
   font-family: 'Poppins', sans-serif;
 }
+
+.drawer-side a.active {
+  color: #F63E7B;
+}
+
+.drawer-side a {
+  background-color: transparent;
+}
